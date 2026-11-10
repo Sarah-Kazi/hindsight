@@ -1,0 +1,37 @@
+{
+  "name": "hindsight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A chat agent with web search and time-aware memory.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.3"
+  },
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/server.ts",
+    "start": "tsx src/server.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "eval": "tsx scripts/eval.ts",
+    "seed": "tsx scripts/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.99",
+    "@ai-sdk/google": "^4.0.114",
+    "@ai-sdk/openai": "^4.0.111",
+    "@hono/node-server": "^2.1.6",
+    "ai": "^7.0.166",
+    "chrono-node": "^2.10.3",
+    "dompurify": "^3.4.17",
+    "dotenv": "^18.0.10",
+    "hono": "^4.13.17",
+    "marked": "^18.2.0",
+    "minisearch": "^7.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

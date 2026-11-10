@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hindsight</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%234f46e5'/><circle cx='16' cy='16' r='6' fill='white'/></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <div class="brand"><span class="logo"></span>Hindsight</div>
+        <button class="btn-new" id="newChat" title="New chat (Ctrl+K)">+ New chat</button>
+      </div>
+      <nav class="threads" id="threads" aria-label="Conversations"></nav>
+      <div class="sidebar-foot" id="modelInfo"></div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu" aria-label="Open conversations">☰</button>
+        <div class="topbar-title" id="title">New chat</div>
+      </header>
+
+      <div class="banner" id="banner" hidden></div>
+
+      <section class="scroll" id="scroll">
+        <div class="messages" id="messages">
+          <div class="empty" id="empty">
+            <h1>What do you want to know?</h1>
+            <p>I search the web for current answers and remember what we talk about, so you can ask me to re-check things later.</p>
+            <div class="examples">
+              <button class="example">Compare Postgres hosting: Neon, Supabase and AWS RDS for a small SaaS. Prices?</button>
+              <button class="example">What did I ask you on 3 November? Is your answer still correct today?</button>
+              <button class="example">What are the best CRM tools for a 20-person sales team right now?</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <form class="composer" id="composer">
+        <div class="composer-box">
+          <textarea id="input" rows="1" placeholder="Ask anything…" autocomplete="off"></textarea>
+          <button type="submit" class="send" id="send" aria-label="Send">↑</button>
+        </div>
+        <div class="hint">Enter to send · Shift+Enter for a new line</div>
+      </form>
+    </main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
